@@ -1,0 +1,17 @@
+@import '@/styles/index';
+
+.image__container {
+  @include set-size(400px, auto);
+  position: absolute;
+  left: 0;
+  top: 0;
+  mix-blend-mode: color-dodge;
+  z-index: 10;
+  opacity: .5;
+
+  img {
+    @include screen-sm() {
+      @include set-size(200px, auto);
+    }
+  }
+}

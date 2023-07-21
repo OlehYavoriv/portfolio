@@ -1,0 +1,10 @@
+@import "@/styles/index";
+
+.layout {
+  @include set-size(100%, 100vh);
+  color: $white-color;
+  position: relative;
+  overflow: hidden;
+  background-size: cover !important;
+  background: url("/page-bg.svg") no-repeat;
+}
