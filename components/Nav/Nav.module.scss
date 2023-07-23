@@ -1,0 +1,93 @@
+@import "styles/index";
+
+.nav {
+  @include set-size(100%, max-content);
+  @include flex($direction: column, $items: center);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  margin-top: auto;
+  row-gap: 1rem;
+  z-index: 50;
+
+  &__items {
+    @include set-size(100%, 80px);
+    @include flex($direction: row, $content: space-between, $items: center);
+    row-gap: 2.5rem;
+    padding: 0 16px;
+    background-color: rgba($white-color, 0.1);
+    backdrop-filter: blur(4px);
+
+    @media (min-width: 768px) {
+      padding: 0 160px;
+    }
+    @media (min-width: 1200px) {
+      @include flex($direction: column, $content: center, $items: center);
+      padding: 32px 16px;
+      height: max-content;
+      border-radius: 9999px;
+    }
+
+    &_link {
+      @include font($font-size: 30px, $line-height: 1, $color: $white-color);
+      position: relative;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+
+      &:hover {
+        color: $ruby-red-color;
+
+        .tooltip {
+          display: flex;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        font-size: 20px;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    @include set-size(4rem, 100vh);
+    @include flex($content: center, $items: center);
+    right: 2%;
+    max-width: 28rem;
+  }
+}
+
+.link__active {
+  color: $ruby-red-color;
+}
+
+.tooltip {
+  position: absolute;
+  padding-right: 56px;
+  right: 0;
+  display: none;
+
+  &__triangle {
+    position: absolute;
+    right: -0.5rem;
+    border-width: 6px 0 6px 8px;
+    border-style: solid;
+    border-color: white;
+    border-top-color: transparent;
+    border-bottom-color: transparent;
+  }
+
+  &__container {
+    @include flex($items: center);
+    position: relative;
+    background-color: $white-color;
+    padding: 6px;
+    color: $black-color;
+    border-radius: 3px;
+
+    &_text {
+      @include font($font-size: 12px, $line-height: 1);
+      text-transform: capitalize;
+    }
+  }
+}
