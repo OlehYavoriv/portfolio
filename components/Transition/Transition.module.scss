@@ -1,0 +1,26 @@
+@import "styles/index";
+
+.layer {
+  &__first, &__second, &__third {
+    @include set-size(100vw, 100vh);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+  }
+
+  &__first {
+    z-index: 30;
+    background-color: $cloud-burst-color;
+  }
+
+  &__second {
+    z-index: 20;
+    background-color: $meteorite-color;
+  }
+
+  &__third {
+    z-index: 10;
+    background-color: $dark-slate-blue-color;
+  }
+}
