@@ -1,0 +1,49 @@
+@import "styles/index";
+
+.projects__btn {
+  a {
+    @include set-size(185px, 185px);
+    @include flex($direction: row, $content: center, $items: center);
+    position: relative;
+    margin: 0 auto;
+    background: url("/circle-star.svg") no-repeat center / cover;
+
+    &:hover {
+      .arrow__icon {
+        transform: translateX(0.5rem);
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 300ms;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      margin: 0;
+    }
+  }
+
+  &_image {
+    @include set-size(100%, 100%);
+    max-width: 141px;
+    max-height: 148px;
+    animation: spin 6s linear infinite;
+  }
+
+  @media (min-width: 1200px) {
+    margin: 0 0;
+  }
+}
+
+.arrow__icon {
+  @include font($font-size: 2.25rem, $line-height: 2.25rem, $color: $french-grey-color);
+  position: absolute;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

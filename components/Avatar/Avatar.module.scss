@@ -1,0 +1,14 @@
+@import "styles/index";
+
+.avatar {
+  display: none;
+
+  img {
+    @include set-size($width: 700px, $height: 100%);
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    max-width: none;
+  }
+}
