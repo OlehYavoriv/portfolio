@@ -2,7 +2,7 @@
 
 .nav {
   @include set-size(100%, max-content);
-  @include flex($direction: column, $items: center);
+  @include flex($direction: row, $items: center);
   position: fixed;
   top: 0;
   bottom: 0;
