@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { fadeIn } from "@/variants";
 import { ProjectsBtn } from "@/components/ProjectsBtn";
 import { Avatar } from "@/components/Avatar";
+import { ParticlesContainer } from "@/components/ParticlesContainer";
 
 const Home = () => {
     return (
@@ -39,7 +40,7 @@ const Home = () => {
             <div className={styles.home__bg}>
                 <div className={styles.home__bg_container}></div>
                 <div className={styles.particles}>
-                    Particles
+                    <ParticlesContainer/>
                 </div>
                 <motion.div className={styles.avatar} variants={fadeIn("up", 0.5)}
                             initial="hidden"
