@@ -1,0 +1,6 @@
+@import "styles/index";
+
+.particles {
+  @include set-size(100%, 100%);
+  position: absolute;
+}
