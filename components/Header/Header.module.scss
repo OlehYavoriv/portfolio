@@ -1,0 +1,55 @@
+@import "styles/index";
+
+.header {
+  @include flex($direction: row, $items: center);
+  width: 100%;
+  position: absolute;
+  z-index: 30;
+
+  &__container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+
+    @media (min-width: 640px) {
+      max-width: 640px;
+    }
+    @media (min-width: 768px) {
+      max-width: 768px;
+    }
+    @media (min-width: 1024px) {
+      max-width: 1024px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 1200px;
+    }
+    @media (min-width: 1536px) {
+      max-width: 1536px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 0;
+    height: 90px;
+  }
+}
+
+.logo {
+  @include flex($direction: column, $content: space-between, $items: center);
+  row-gap: 1.5rem;
+  padding: 2rem 0;
+
+  &__text {
+    @include font(1.5rem, 2rem, $white-color, 100);
+    letter-spacing: 0.1em;
+
+    span {
+      color: $azure-color;
+      font-weight: 700;
+    }
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+}

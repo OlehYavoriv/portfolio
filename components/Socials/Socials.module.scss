@@ -1,0 +1,17 @@
+@import "styles/index";
+
+.socials__list {
+  @include flex($direction: row, $content: space-between, $items: center);
+  column-gap: 1.25rem;
+
+  a {
+    @include font(1.125rem, 1.75rem, $white-color);
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+
+    &:hover {
+      color: $ruby-red-color;
+    }
+  }
+}
