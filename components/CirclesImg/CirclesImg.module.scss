@@ -1,0 +1,29 @@
+@import "styles/index";
+
+.circles__img {
+  width: 200px;
+  position: absolute;
+  right: -4rem;
+  bottom: -0.5rem;
+  mix-blend-mode: color-dodge;
+  z-index: 10;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  transition-duration: 75ms;
+
+  img {
+    @include set-size(100%, 100%);
+  }
+
+  @media (min-width: 1200px) {
+    width: 300px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
