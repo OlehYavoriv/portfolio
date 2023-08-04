@@ -4,10 +4,19 @@ import { fadeIn } from "@/variants";
 import { ProjectsBtn } from "@/components/ProjectsBtn";
 import { Avatar } from "@/components/Avatar";
 import { ParticlesContainer } from "@/components/ParticlesContainer";
+import Head from "next/head";
 
 const Home = () => {
     return (
         <section className={styles.home}>
+            <Head>
+                <title>Yavoriv Oleh | Portfolio</title>
+                <meta
+                    property="og:title"
+                    content="Yavoriv Oleh | Portfolio"
+                    key="title"
+                />
+            </Head>
             <div className={styles.home__container}>
                 <div className={styles.home__main_text}>
                     <motion.div className={styles.home__title} variants={fadeIn("down", 0.2)}
