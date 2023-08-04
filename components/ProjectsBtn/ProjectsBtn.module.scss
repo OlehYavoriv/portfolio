@@ -1,6 +1,7 @@
 @import "styles/index";
 
 .projects__btn {
+  z-index: 10;
   a {
     @include set-size(185px, 185px);
     @include flex($direction: row, $content: center, $items: center);
