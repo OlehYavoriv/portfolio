@@ -1,0 +1,96 @@
+@import "styles/index";
+
+.swiper {
+  height: 280px;
+
+  &__wrapper {
+    @include set-size(100%, 100%);
+    display: grid;
+    gap: 1rem;
+    cursor: pointer;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+
+    .slide_container {
+      @include flex($items: center, $content: center);
+      position: relative;
+      border-radius: 0.5rem;
+      overflow: hidden;
+
+      &__item {
+        @include flex($items: center, $content: center);
+        @include set-size(100%, 100%);
+        position: relative;
+        overflow: hidden;
+
+        img {
+          @include set-size(100%, 100%);
+        }
+
+        @media (min-width: 576px) {
+          .slide_container__item img {
+            @include set-size(auto, 100%);
+          }
+        }
+
+        .overlay {
+          position: absolute;
+          inset: 0;
+          background-image: linear-gradient(to left, var(--tw-gradient-from), var(--tw-gradient-stops), var(--tw-gradient-to));
+          --tw-gradient-from: transparent;
+          --tw-gradient-stops: #E838CC;
+          --tw-gradient-to: #4a22bd;
+          opacity: 0;
+          transition-property: all;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 700ms;
+
+          .links {
+            @include flex(column, center, center);
+            @include set-size(100%, 10%);
+            row-gap: 2rem;
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            position: absolute;
+            bottom: 0;
+            transform: translateY(100%);
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 700ms;
+
+            a {
+              color: $white-color;
+              white-space: nowrap;
+              border-radius: 5px;
+              padding: 5px;
+              transition-property: all;
+              transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+              transition-duration: 500ms;
+
+              &:hover {
+                transform: scale(1.2);
+              }
+            }
+          }
+        }
+
+        &:hover {
+          .overlay {
+            opacity: 0.8;
+          }
+          .links {
+            transform: translateY(-3rem);
+
+            @media (min-width: 1200px) {
+              transform: translateY(-5rem);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 576px) {
+    height: 500px;
+  }
+}
