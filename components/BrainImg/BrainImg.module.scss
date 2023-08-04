@@ -1,0 +1,29 @@
+@import "styles/index";
+
+.brain_img {
+  width: 200px;
+  position: absolute;
+  left: -9rem;
+  bottom: -3rem;
+  transform: rotate(12deg);
+  mix-blend-mode: color-dodge;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  z-index: 10;
+
+  img {
+    @include set-size(100%, 100%);
+  }
+
+  @media (min-width: 1200px) {
+    width: 260px;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
