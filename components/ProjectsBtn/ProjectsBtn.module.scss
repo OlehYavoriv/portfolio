@@ -7,7 +7,7 @@
     @include flex($direction: row, $content: center, $items: center);
     position: relative;
     margin: 0 auto;
-    background: url("/public/circle-star.svg") no-repeat center / cover;
+    background: url("/circle-star.svg") no-repeat center / cover;
 
     &:hover {
       .arrow__icon {
