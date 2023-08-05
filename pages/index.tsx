@@ -23,7 +23,7 @@ const Home = () => {
                                 initial="hidden"
                                 animate="show"
                                 exit="hidden">
-                        <h1>Hi, I'm Oleh Yavoriv</h1>
+                        <h1>{`Hi, I'm Oleh Yavoriv`}</h1>
                         <div className={styles.text__animate}><h3>Frontend Developer</h3></div>
                     </motion.div>
                     <motion.p variants={fadeIn("down", 0.3)}
