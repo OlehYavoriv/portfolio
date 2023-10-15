@@ -18,6 +18,12 @@ export const projectSlides: ProjectSlides = {
         {
             projects: [
                 {
+                    liveDemo: 'https://delightful-puppy-9268fb.netlify.app/',
+                    gitHub: 'https://github.com/OlehYavoriv/weather-app',
+                    title: "Weather-app",
+                    path: "/weather-app.png",
+                },
+                {
                     liveDemo: 'https://intellistart-wallet-sixth-team.netlify.app/',
                     gitHub: 'https://github.com/vitaliihoroshko/intellistart-wallet',
                     title: "Wallet-application for personal budget tracking",
@@ -35,16 +41,16 @@ export const projectSlides: ProjectSlides = {
                     title: "YavShop",
                     path: "/yav-shop.png",
                 },
+            ],
+        },
+        {
+            projects: [
                 {
                     liveDemo: 'https://olehyavoriv.github.io/MotorsBoat-project/',
                     gitHub: 'https://github.com/OlehYavoriv/MotorsBoat-project',
                     title: "MotorsBoat",
                     path: "/motors-boat.png",
                 },
-            ],
-        },
-        {
-            projects: [
                 {
                     liveDemo: '',
                     gitHub: 'https://github.com/VolodymyrDidur/reserwise',
@@ -63,16 +69,17 @@ export const projectSlides: ProjectSlides = {
                     title: "Desire project",
                     path: "/desire.png",
                 },
+
+            ],
+        },
+        {
+            projects: [
                 {
                     liveDemo: 'https://quirky-jang-f04768.netlify.app/',
                     gitHub: 'https://github.com/OlehYavoriv/JS-projects/tree/main/02-Movie-app',
                     title: "MovieApp",
                     path: "/movie-app.png",
                 },
-            ],
-        },
-        {
-            projects: [
                 {
                     liveDemo: 'https://olehyavoriv.github.io/ToDo-List/',
                     gitHub: 'https://github.com/OlehYavoriv/ToDo-Listco',
@@ -91,13 +98,18 @@ export const projectSlides: ProjectSlides = {
                     title: "StopWatch",
                     path: "/stopwatch.png",
                 },
-                {
-                    liveDemo: 'https://vigorous-wing-7b9029.netlify.app/',
-                    gitHub: 'https://github.com/OlehYavoriv/JS-projects/tree/main/03-Dark%20toggle',
-                    title: "Dark/Light Theme",
-                    path: "/dark-light-theme.png",
-                },
             ],
+        },
+        {
+            projects:
+                [
+                    {
+                        liveDemo: 'https://vigorous-wing-7b9029.netlify.app/',
+                        gitHub: 'https://github.com/OlehYavoriv/JS-projects/tree/main/03-Dark%20toggle',
+                        title: "Dark/Light Theme",
+                        path: "/dark-light-theme.png",
+                    },
+                ]
         }
     ],
 };
